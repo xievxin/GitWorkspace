@@ -1,0 +1,9 @@
+/*
+android:divider="#00000000"	分隔线透明
+android:dividerHeight="7dp"	item间隔
+*/
+ll = new LinearLayout(MainActivity.this);
+ll.setDescendantFocusability(ViewGroup.FOCUS_BLOCK_DESCENDANTS);
+
+btn = new Button(MainActivity.this);
+btn.setFocusable(false);

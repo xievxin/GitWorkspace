@@ -1,0 +1,1 @@
+setOverScrollMode(View.OVER_SCROLL_NEVER);

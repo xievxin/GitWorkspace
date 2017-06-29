@@ -1,0 +1,11 @@
+1、Theme.Material不起作用？
+	删除values下styles.xml,新建values-v21、values-v14
+2、去除button默认悬浮背景
+	View.setStateListAnimator(null);
+
+	添加：View.setStateListAnimator(AnimatorInflater.loadStateListAnimator(getContext(), R.drawable.z_animator));
+3、波纹有边界动画
+	TypedValue typedValue = new TypedValue(); 
+	getTheme().resolveAttribute(android.R.attr.selectableItemBackground, typedValue, true);
+	ll.setBackgroundResource(typedValue.resourceId);
+4、ripple drawable实现 波纹和background兼容

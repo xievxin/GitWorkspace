@@ -1,0 +1,14 @@
+@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		ResolveInfo resolveInfo = getPackageManager().resolveActivity(new Intent(Intent.ACTION_MAIN).addCategory(Intent.CATEGORY_HOME), 0);
+		if(keyCode==KeyEvent.KEYCODE_BACK){
+			ActivityInfo ai = resolveInfo.activityInfo;
+			Intent startIntent = new Intent(Intent.ACTION_MAIN);
+			startIntent.addCategory(Intent.CATEGORY_LAUNCHER);
+			startIntent.setComponent(new ComponentName(ai.packageName, ai.name));
+			startIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+			this.startActivity(startIntent);
+			return true;
+		}
+		return super.onKeyDown(keyCode, event);
+	}

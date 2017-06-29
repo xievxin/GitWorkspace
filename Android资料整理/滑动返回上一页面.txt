@@ -1,0 +1,22 @@
+	private GestureDetector gestureDetector;
+
+	gestureDetector = new GestureDetector(this, onGsListener);
+	
+	@Overide
+	public boolean onTouchEvent(MotionEvent event) {
+		return gestureDetector.onTouchEvent(event);
+	}
+
+
+	private OnGestureListener onGsListener = new OnGestureListener() {
+		
+		public boolean onFling(MotionEvent e1, MotionEvent e2, float arg2, float arg3) {
+			float x = e2.getX() - e1.getX();
+			if(x>0){	//向右滑动返回上一页面
+				finish();
+			}
+			return false;
+		}
+		
+		public boolean onDown(MotionEvent arg0) {return false;}
+	};

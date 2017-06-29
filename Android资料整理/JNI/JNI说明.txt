@@ -1,0 +1,12 @@
+1、eclipse配置NDK，用来动态编译产生so库；（http://blog.csdn.net/dengcun/article/details/7048884）
+2、事例代码：
+package com.example.jnitest;
+public class JniSayHello {
+	public static native String keyWords(String part1);
+}
+cmd到 bin/classes，运行 javah com.example.jnitest.JniSayHello后生成com_example_jnitest_JniSayHello.h文件。
+3、工程根目录新建jni文件夹，将Android.mk（注意修改其中内容）、生成的.h文件和com_example_jnitest_JniSayHello.c复制进去；
+	com_example_jnitest_JniSayHello.c文件中引用.h文件，并实现未实现的方法
+保存后生成so库文件。
+4、右键工程Properties->Android勾选Is Library，clean工程,bin下生成jar包。
+	jar包和so库可在其他工程中使用。

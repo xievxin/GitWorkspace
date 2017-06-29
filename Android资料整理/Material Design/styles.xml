@@ -1,0 +1,23 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <style name="Theme.Start" parent="CkAppTheme">
+        <item name="android:windowBackground">@drawable/loginh</item>
+        <item name="android:statusBarColor">@null</item>
+    </style>
+    
+    <!-- Material Theme -->
+    <style name="CkButton" parent="android:Widget.Material.Button">
+    	<item name="android:minHeight">4dp</item>
+        <item name="android:minWidth">4dp</item>
+        <item name="android:gravity">center_vertical|center_horizontal</item>
+        <item name="android:background">@null</item>
+    </style>
+    <style name="CkAppTheme" parent="android:Theme.Material.Light">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="android:statusBarColor">@color/yellow</item>
+        <item name="android:buttonStyle">@style/CkButton</item>
+       <item name="android:textColor">#000000</item>
+    </style>
+    
+</resources>

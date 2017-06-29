@@ -1,0 +1,14 @@
+ldpi:mdpi:hdpi:xhdpi:xxhdpi=3:4:6:8:12
+ex: values-ldpi、values-xxhdpi
+不同宽高从dimens.xml读取
+
+尺寸适配：
+	正方形的尺寸使用最好用同一个dimen，否则可能出现拉伸。ex: w:x100 h:x100
+/FenBianLv.java
+
+字体适配：
+也用lay_y.xml中的y__;
+
+图片适配：
+（PxCook）720*1280切图，基准xhdpi，切hdpi和xxhdpi放到对应文件夹中。
+
