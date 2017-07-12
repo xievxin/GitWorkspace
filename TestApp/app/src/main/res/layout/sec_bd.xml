@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="pojo"
+            type="art.xx.com.testapp.BdActivity.MyPOJO"/>
+        <variable
+            name="activity"
+            type="art.xx.com.testapp.BdActivity"/>
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <Button
+            android:id="@+id/toastBtn"
+            android:onClick="@{activity.onClick}"
+            android:text="xievxin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Button
+            android:text="@{pojo.name}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+</LinearLayout>
+</layout>
