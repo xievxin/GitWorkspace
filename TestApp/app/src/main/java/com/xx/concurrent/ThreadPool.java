@@ -73,7 +73,7 @@ public class ThreadPool {
 
 	private Runnable getTask() {
 		try {
-			return workingQueue.poll();
+			return workingQueue.take();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
