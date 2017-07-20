@@ -2,6 +2,7 @@ package com.xx.concurrent;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.util.Log;
 
@@ -22,12 +23,12 @@ public class ThreadActivity extends Activity {
 
 
         ThreadUtil.runTask();
-//        new Handler().postDelayed(new Runnable() {
-//            @Override
-//            public void run() {
-//                ThreadUtil.runTask();
-//            }
-//        }, 5000);
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                ThreadUtil.runTask();
+            }
+        }, 5000);
     }
 
 
@@ -36,7 +37,7 @@ public class ThreadActivity extends Activity {
         static ExecutorService pool;
 
         static {
-            pool = Executors.newFixedThreadPool(2);
+            pool = Executors.newCachedThreadPool();
         }
 
         public static void runTask() {
