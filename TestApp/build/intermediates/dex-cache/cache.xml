@@ -8,52 +8,25 @@
         optimize="true"
         revision="25.0.0"
         sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
-        <dex dex="D:\GitWorkspace\TestApp\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3_2c7b3f93a4765de67fc456e30fee656c798d7e65.jar" />
+        <dex dex="D:\git\GitWorkspace\TestApp\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3_2c7b3f93a4765de67fc456e30fee656c798d7e65.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="D:\AndroidStudio\gradle\m2repository\com\android\databinding\baseLibrary\2.3.0\baseLibrary-2.3.0.jar"
+        jar="C:\Users\xievxin\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.8.1\4d060ca3190df0eda4dc13415532a12e15ca5f11\okhttp-3.8.1.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
-        sha1="cf0b6ab1d94f770655f81657b93fce2ba4cd331d">
-        <dex dex="D:\GitWorkspace\TestApp\app\build\intermediates\pre-dexed\debug\baseLibrary-2.3.0_2cae1460b06a158bb73d01caae6c032344696975.jar" />
+        sha1="4d060ca3190df0eda4dc13415532a12e15ca5f11">
+        <dex dex="D:\git\GitWorkspace\TestApp\app\build\intermediates\pre-dexed\debug\okhttp-3.8.1_be40e8aae0860619d1471ac14766fe3d899087db.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\Administrator\.android\build-cache\5c89fa45d5e6bb9d48e4d6c99c5edc0231c6ef57\output\jars\classes.jar"
+        jar="C:\Users\xievxin\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.13.0\a9283170b7305c8d92d25aff02a6ab7e45d06cbe\okio-1.13.0.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
-        sha1="7f2f348b830f292429db987f74ba3e67c6752322">
-        <dex dex="D:\GitWorkspace\TestApp\app\build\intermediates\pre-dexed\debug\classes_85cf3a93c7feb327cc78629da9396db0997ae400.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Administrator\.android\build-cache\d15b6b3b20dc476105b6076b7082e34ecad5de35\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
-        <dex dex="D:\GitWorkspace\TestApp\app\build\intermediates\pre-dexed\debug\classes_6baa70b82fe62d1208b2331764c209b4845041d9.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Administrator\.android\build-cache\d15b6b3b20dc476105b6076b7082e34ecad5de35\output\jars\libs\internal_impl-21.0.3.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
-        <dex dex="D:\GitWorkspace\TestApp\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3_f1df5fc5e9e0068ffde8d3383fc1d7642525ebd4.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Administrator\.android\build-cache\067144eda827982124b1d2427bf89741fbdd0b71\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="68956f5ba1517b7a3d513ba540548e257741cbae">
-        <dex dex="D:\GitWorkspace\TestApp\app\build\intermediates\pre-dexed\debug\classes_bc9750124439574cc02ea55f9203bb0926a0dbec.jar" />
+        sha1="a9283170b7305c8d92d25aff02a6ab7e45d06cbe">
+        <dex dex="D:\git\GitWorkspace\TestApp\app\build\intermediates\pre-dexed\debug\okio-1.13.0_e3443eddc633b9d99a4e8c476ce86ffbd4b920cf.jar" />
     </item>
 
 </items>
