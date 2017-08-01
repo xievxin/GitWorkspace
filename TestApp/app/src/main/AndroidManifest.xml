@@ -22,9 +22,7 @@
                 <!--<category android:name="android.intent.category.LAUNCHER" />-->
             <!--</intent-filter>-->
         </activity>
-<<<<<<< HEAD
-        <activity android:name=".AudioActivity">
-=======
+        <activity android:name=".AudioActivity"/>
         <activity android:name="com.xx.concurrent.ThreadActivity">
             <!--<intent-filter>-->
                 <!--<action android:name="android.intent.action.MAIN" />-->
@@ -32,7 +30,6 @@
             <!--</intent-filter>-->
         </activity>
         <activity android:name="com.xx.conn.ConnectionActivity">
->>>>>>> 21117e36e98b17e4ff8d932473cfd76619235f8c
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
