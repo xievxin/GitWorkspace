@@ -7,6 +7,7 @@ import android.support.annotation.Nullable;
 import java.io.IOException;
 
 import okhttp3.Call;
+import okhttp3.FormBody;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 
@@ -19,6 +20,11 @@ public class ConnectionActivity extends Activity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
+
+        FormBody body = new FormBody.Builder().add("", "").build();
+        Request request1 = new Request.Builder().post(body).build();
 
 
         final Request request = new Request.Builder()
