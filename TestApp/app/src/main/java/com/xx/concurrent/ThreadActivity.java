@@ -22,6 +22,16 @@ public class ThreadActivity extends Activity {
         super.onCreate(savedInstanceState);
 
 
+//        ThreadUtil.runTask();
+//        new Handler().postDelayed(new Runnable() {
+//            @Override
+//            public void run() {
+//                ThreadUtil.runTask();
+//            }
+//        }, 5000);
+
+//        SynchronousQueue queue = new SynchronousQueue<String>();
+//        queue.offer("1");
         ThreadUtil.runTask();
         new Handler().postDelayed(new Runnable() {
             @Override
@@ -42,7 +52,7 @@ public class ThreadActivity extends Activity {
 
         public static void runTask() {
             int count = 0;
-            while(count++ < 2) {
+            while(count++ < 1) {
                 pool.execute(new Runnable() {
                     @Override
                     public void run() {
