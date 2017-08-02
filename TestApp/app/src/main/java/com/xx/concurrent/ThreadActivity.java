@@ -33,12 +33,12 @@ public class ThreadActivity extends Activity {
 //        SynchronousQueue queue = new SynchronousQueue<String>();
 //        queue.offer("1");
         ThreadUtil.runTask();
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                ThreadUtil.runTask();
-            }
-        }, 5000);
+//        new Handler().postDelayed(new Runnable() {
+//            @Override
+//            public void run() {
+//                ThreadUtil.runTask();
+//            }
+//        }, 5000);
     }
 
 
@@ -47,12 +47,12 @@ public class ThreadActivity extends Activity {
         static ExecutorService pool;
 
         static {
-            pool = Executors.newCachedThreadPool();
+            pool = Executors.newScheduledThreadPool(2);
         }
 
         public static void runTask() {
             int count = 0;
-            while(count++ < 1) {
+            while(count++ < 3) {
                 pool.execute(new Runnable() {
                     @Override
                     public void run() {

@@ -3,30 +3,21 @@
 
     <item
         is-multidex="false"
-        jar="D:\sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.3\support-annotations-21.0.3.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
-        <dex dex="D:\git\GitWorkspace\TestApp\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3_2c7b3f93a4765de67fc456e30fee656c798d7e65.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\xievxin\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.8.1\4d060ca3190df0eda4dc13415532a12e15ca5f11\okhttp-3.8.1.jar"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.8.1\4d060ca3190df0eda4dc13415532a12e15ca5f11\okhttp-3.8.1.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
         sha1="4d060ca3190df0eda4dc13415532a12e15ca5f11">
-        <dex dex="D:\git\GitWorkspace\TestApp\app\build\intermediates\pre-dexed\debug\okhttp-3.8.1_be40e8aae0860619d1471ac14766fe3d899087db.jar" />
+        <dex dex="D:\GitWorkspace\TestApp\app\build\intermediates\pre-dexed\debug\okhttp-3.8.1_032b1d2117e56d98e15716cdfc48889f5c1fd244.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\xievxin\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.13.0\a9283170b7305c8d92d25aff02a6ab7e45d06cbe\okio-1.13.0.jar"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.13.0\a9283170b7305c8d92d25aff02a6ab7e45d06cbe\okio-1.13.0.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
         sha1="a9283170b7305c8d92d25aff02a6ab7e45d06cbe">
-        <dex dex="D:\git\GitWorkspace\TestApp\app\build\intermediates\pre-dexed\debug\okio-1.13.0_e3443eddc633b9d99a4e8c476ce86ffbd4b920cf.jar" />
+        <dex dex="D:\GitWorkspace\TestApp\app\build\intermediates\pre-dexed\debug\okio-1.13.0_f63c7ab08dbed3c34e0fe0b9b1a691240ffa1bb7.jar" />
     </item>
 
 </items>
