@@ -1,6 +1,7 @@
 package art.xx.com.testapp;
 
 import android.app.Activity;
+import android.content.BroadcastReceiver;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.KeyEvent;
@@ -34,5 +35,14 @@ public class AudioActivity extends Activity {
             default:break;
         }
         return super.onKeyDown(keyCode, event);
+    }
+
+
+    class aa extends BroadcastReceiver {
+        void a() {
+            abortBroadcast();
+            setResultExtras();
+            this.setResult()
+        }
     }
 }
