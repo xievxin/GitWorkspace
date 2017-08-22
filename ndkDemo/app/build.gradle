@@ -19,8 +19,8 @@ model{
         }
         ndk {
             moduleName = "firstJni"
-            abiFilters.addAll(['armeabi', 'armeabi-v7a']) //this is default
-            ldLibs.addAll([ 'android', 'log']);
+            abiFilters.addAll(['armeabi', 'armeabi-v7a', "x86"]) //this is default
+            ldLibs.addAll(['android', 'log']);
         }
     }
 }
