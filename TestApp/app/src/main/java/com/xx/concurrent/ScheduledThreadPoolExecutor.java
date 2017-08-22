@@ -873,7 +873,7 @@ public class ScheduledThreadPoolExecutor
          * Sifts element added at top down to its heap-ordered spot.
          * Call only when holding lock.
          */
-        private void siftDown(int k, RunnableScheduledFuture<?> key) {
+        private void siftDown(int k, RunnableScheduledFuture<?> key) {  //0, queue[size]
             int half = size >>> 1;
             while (k < half) {
                 int child = (k << 1) + 1;
@@ -1028,7 +1028,7 @@ public class ScheduledThreadPoolExecutor
          * holding lock.
          * @param f the task to remove and return
          */
-        private RunnableScheduledFuture<?> finishPoll(RunnableScheduledFuture<?> f) {
+        private RunnableScheduledFuture<?> finishPoll(RunnableScheduledFuture<?> f) {   //f：queue[0]
             int s = --size;
             RunnableScheduledFuture<?> x = queue[s];
             queue[s] = null;
