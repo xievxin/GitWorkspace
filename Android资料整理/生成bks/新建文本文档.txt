@@ -1,2 +1,0 @@
-bcprov-ext-jdk16-146.jar放在jdk/lib目录下
-执行：keytool -importcert -keystore test.bks -file test.cer -storetype BKS -provider org.bouncycastle.jce.provider.BouncyCastleProvider  

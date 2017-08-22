@@ -1,7 +1,0 @@
-http://blog.csdn.net/jdsjlzx/article/details/51868640   系列视频教程
-
-timer：延迟执行
-zip：所有执行完后，一起发送
-merge：按顺序执
-interval：固定时间间隔执行（轮询）
-PublishSubject：类似与register了很多listener，通过onNext一起回调

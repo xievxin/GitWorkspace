@@ -1,2 +1,0 @@
-1、UnsignedApk: projectname/build/outputs/apk
-2、混淆-mapping: projectname/build/outputs/mapping

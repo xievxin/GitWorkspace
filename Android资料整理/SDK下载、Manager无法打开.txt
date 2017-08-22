@@ -1,9 +1,0 @@
-打开..\Android\sdk\SDK Manager.exe
-
-Tools-Options:
-mirrors.opencas.cn	//大量源码
-80
-
-勾选 use download cache
-勾选 force https....
-勾选 enabled ...
