@@ -1,30 +1,37 @@
 #include <jni.h>
+#include <stdio.h>
 
-JNIEXPORT jstring JNICALL
-Java_com_xx_ndk_JniTest_getHW(JNIEnv *env, jobject instance) {
+jint init = 0;
+jclass cls;
 
-    // TODO
+void main() {
+    printf("lllll");
+}
 
-
-    return (*env)->NewStringUTF(env, "hello world");
+JNIEXPORT jint JNICALL
+JNI_OnLoad(JavaVM* vm, void* reserved) {
+    init = 1;
+    return JNI_VERSION_1_4;
 }
 
 JNIEXPORT jstring JNICALL
-Java_com_xx_ndk_JniTest_getNameDetail(JNIEnv *env, jclass type, jstring name_) {
-    const char *name = (*env)->GetStringUTFChars(env, name_, 0);
+Java_com_xx_ndk_JniTest_getHW(JNIEnv *env, jclass type) {
 
-    // TODO
-
-    (*env)->ReleaseStringUTFChars(env, name_, name);
-
-    return (*env)->NewStringUTF(env, name_);
+    char* string = "aaaaa";
+    jstring str = (*env)->NewStringUTF(env, "abc");
+    main();
+    return str;
 }
 
-JNIEXPORT jstring JNICALL
-Java_com_xx_ndk_SecJni_ssss(JNIEnv *env, jclass type) {
+JNIEXPORT void JNICALL
+Java_com_xx_ndk_JniTest_sayDog(JNIEnv *env, jobject instance) {
 
-    // TODO
+    jstring num = (*env)->NewStringUTF(env, "2");
 
+    jclass cls = (*env)->GetObjectClass(env, instance);
+    jmethodID jmethodID = (*env)->GetMethodID(env, cls, "wangwang", "(Ljava/lang/String;)V");
+    (*env)->CallVoidMethod(env, instance, jmethodID, num);
 
-    return (*env)->NewStringUTF(env, "");
+    (*env)->ExceptionOccurred(env);
+    (*env)->GetVersion(env);
 }

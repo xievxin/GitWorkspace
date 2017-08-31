@@ -1,5 +1,7 @@
 package com.xx.ndk;
 
+import android.util.Log;
+
 /**
  * Created by xievxin on 2017/8/22.
  */
@@ -12,5 +14,10 @@ public class JniTest {
 
     public static native String getHW();
 
-    public static native String getNameDetail(String name);
+    public native void sayDog();
+
+    public void wangwang(String num) {
+        Log.i("~", "wangwang: " + num + "声");
+    }
+
 }
