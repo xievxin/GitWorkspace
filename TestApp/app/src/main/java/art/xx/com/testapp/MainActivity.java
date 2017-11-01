@@ -3,7 +3,8 @@ package art.xx.com.testapp;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
+import android.os.Process;
+import android.util.Log;
 import android.widget.Button;
 
 /**
@@ -12,25 +13,20 @@ import android.widget.Button;
 
 public class MainActivity extends Activity {
 
+    public static String value = "who's sb?";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
+        Log.i("~", "onCreate: "+ Process.myPid());
+
+        value = "tqb";
 
         final Button btn = (Button) findViewById(R.id.button);
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                btn.setText("aaa");
 
-                Intent intent = new Intent(MainActivity.this, WebActivity.class);
-                intent.putExtra("url", "https://www.baidu.com/");
-                startActivity(intent);
-//                Intent intent1 = new Intent(MainActivity.this, WebActivity.class);
-//                intent1.putExtra("url", "http://www.qq.com/");
-//                startActivity(intent1);
-            }
-        });
+        startActivity(new Intent(this, ProcessActivity.class));
     }
+
 }

@@ -19,5 +19,4 @@ public class JniTest {
     public void wangwang(String num) {
         Log.i("~", "wangwang: " + num + "声");
     }
-
 }

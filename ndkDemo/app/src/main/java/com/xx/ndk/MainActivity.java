@@ -16,4 +16,5 @@ public class MainActivity extends Activity {
 //        new JniTest().sayDog();
         Log.i(TAG, "onCreate: "+JniTest.getHW());
     }
+
 }
