@@ -6,8 +6,6 @@ import android.os.Process;
 import android.util.Log;
 import android.widget.Button;
 
-import com.xx.process.ChuangkeFit;
-
 /**
  * Created by xievxin on 2017/6/28.
  */
@@ -22,11 +20,19 @@ public class ProcessActivity extends Activity {
         Log.i("~", "onCreate: "+ Process.myPid());
 
         final Button btn = (Button) findViewById(R.id.button);
-        btn.setText(MainActivity.value);
+//        btn.setText(MainActivity.value);
 
-        new ChuangkeFit(this);
+//        new ChuangkeFit(this);
 
 //        startActivity(new Intent(this, SmsActivity.class));
+
+        btn.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                setResult(111);
+                finish();
+            }
+        }, 2000);
     }
 
 }

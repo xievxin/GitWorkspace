@@ -6,7 +6,6 @@ import android.content.ComponentName;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.os.IBinder;
-import android.os.RemoteException;
 import android.util.Log;
 
 /**
@@ -24,12 +23,12 @@ public class ChuangkeFit {
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
             IChuangke ck = IChuangke.Stub.asInterface(service);
-            try {
-                ck.jiaRen("xiexin");
-                Log.i("~", "onServiceConnected: "+ck.getPersonList());
-            } catch (RemoteException e) {
-                e.printStackTrace();
-            }
+//            try {
+//                ck.jiaRen("xiexin");
+//                Log.i("~", "onServiceConnected: "+ck.getPersonList());
+//            } catch (RemoteException e) {
+//                e.printStackTrace();
+//            }
         }
 
         @Override
