@@ -8,6 +8,8 @@ import android.os.Process;
 import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.View;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
 import android.widget.Button;
 
 import java.lang.reflect.InvocationTargetException;
@@ -30,19 +32,23 @@ public class MainActivity extends Activity {
         setContentView(R.layout.main);
         Log.i("~", "onCreate: "+ Process.myPid());
 
+        final WebView webView = (WebView) findViewById(R.id.webview);
         final Button btn = (Button) findViewById(R.id.button);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                webView.loadUrl("http://test.chuangke18.com/activity3/getYqy.html");
 //                startActivity(new Intent(MainActivity.this, ProcessActivity.class));
             }
         });
 
+        webView.getSettings().setSavePassword(false);
+        webView.getSettings().setJavaScriptEnabled(true);
+        webView.getSettings().setCacheMode(WebSettings.LOAD_NO_CACHE);    // 连训练创客小宝都直接加载缓存，舍弃
+        webView.getSettings().setDomStorageEnabled(true);
 
-        Fragment fragment = new MyFragment();
-        getFragmentManager().beginTransaction()
-                .add(fragment, frgTag)
-                .commitAllowingStateLoss();
+
+
     }
 
     @Override

@@ -11,6 +11,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
+        <meta-data android:name="android.webkit.WebView.EnableSafeBrowsing"
+                   android:value="true" />
+        <meta-data
+            android:name="com.ckjr.model.GlideConfiguration"
+            android:value="GlideModule"/>
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.1"/>
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

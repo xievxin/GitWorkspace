@@ -10,7 +10,7 @@ android {
         versionName "1.0"
 
         ndk{
-            abiFilters "armeabi", "mips", "x86"
+            abiFilters "armeabi", "armeabi-v7a", "x86"
         }
     }
     buildTypes {
