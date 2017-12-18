@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "D:\\workspace\\EasyWeb\\easyweb\\build\\intermediates\\res\\merged\\release\\layout\\webcontainer.xml",
+        "source": "D:\\workspace\\EasyWeb\\easyweb\\src\\main\\res\\layout\\webcontainer.xml"
+    },
+    {
+        "merged": "D:\\workspace\\EasyWeb\\easyweb\\build\\intermediates\\res\\merged\\release\\layout\\web_title.xml",
+        "source": "D:\\workspace\\EasyWeb\\easyweb\\src\\main\\res\\layout\\web_title.xml"
+    }
+]

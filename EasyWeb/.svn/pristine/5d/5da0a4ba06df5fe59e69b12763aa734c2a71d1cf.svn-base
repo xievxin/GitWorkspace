@@ -1,0 +1,46 @@
+package com.easyweb.test;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.util.Log;
+
+import java.lang.reflect.Method;
+
+/**
+ * Created by xievxin on 2017/12/4.
+ */
+
+public class TestActivity extends Activity {
+
+    private static final String TAG = "TestActivity";
+
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        try {
+            Method dMtd = B.class.getMethod("test");
+            Log.i(TAG, "onCreate: " + (dMtd==null));
+        } catch (NoSuchMethodException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            Method dMtd = B.class.getDeclaredMethod("test");
+            Log.i(TAG, "onCreate: " + (dMtd==null));
+        } catch (NoSuchMethodException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    abstract class A {
+        public  void test(){
+
+        }
+    }
+
+    class B extends A {
+    }
+}

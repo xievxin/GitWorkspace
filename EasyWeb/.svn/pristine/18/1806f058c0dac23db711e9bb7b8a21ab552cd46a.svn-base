@@ -1,0 +1,11 @@
+package com.xx.model.servicebean;
+
+import com.xx.model.ServiceBean;
+
+/**
+ * 改标题
+ * Created by xievxin on 2017/11/16.
+ */
+
+public class TitleServiceBean extends ServiceBean {
+}

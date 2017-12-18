@@ -1,0 +1,10 @@
+package com.xx.model;
+
+import com.xx.easyweb.EasyOperator;
+
+/**
+ * Created by xievxin on 2017/11/21.
+ */
+
+public class ModelWebOperator extends EasyOperator {
+}

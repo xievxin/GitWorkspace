@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "D:\\workspace\\EasyWeb\\easyweb\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\webcontainer.xml",
+        "source": "D:\\workspace\\EasyWeb\\easyweb\\build\\intermediates\\bundles\\debug\\res\\layout\\webcontainer.xml"
+    },
+    {
+        "merged": "D:\\workspace\\EasyWeb\\easyweb\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\web_title.xml",
+        "source": "D:\\workspace\\EasyWeb\\easyweb\\build\\intermediates\\bundles\\debug\\res\\layout\\web_title.xml"
+    }
+]

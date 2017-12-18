@@ -1,0 +1,10 @@
+package com.xx.model.servicebean;
+
+import com.xx.model.ServiceBean;
+
+/**
+ * Created by xievxin on 2017/12/5.
+ */
+
+public class LoadUrlServiceBean extends ServiceBean {
+}

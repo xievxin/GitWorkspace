@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "D:\\workspace\\EasyWeb\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\progressbar.xml",
+        "source": "D:\\workspace\\EasyWeb\\easyweb\\build\\intermediates\\bundles\\default\\res\\drawable\\progressbar.xml"
+    },
+    {
+        "merged": "D:\\workspace\\EasyWeb\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\white_selector.xml",
+        "source": "D:\\workspace\\EasyWeb\\easyweb\\build\\intermediates\\bundles\\default\\res\\drawable\\white_selector.xml"
+    }
+]

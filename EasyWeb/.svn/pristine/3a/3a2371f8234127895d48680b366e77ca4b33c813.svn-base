@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="D:\workspace\EasyWeb\easyweb\build\intermediates\bundles\default\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="dba05a26cc0dc579ee62a13358631a4bba593044">
+        <dex dex="D:\workspace\EasyWeb\app\build\intermediates\pre-dexed\debug\classes_c9ea94d330aeae75c60c56eb3a328c8746a345a5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\workspace\EasyWeb\easyweb\build\intermediates\bundles\default\libs\tbs_3.5.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="186caf4ae1a1650f1f833e756586af0216ca712a">
+        <dex dex="D:\workspace\EasyWeb\app\build\intermediates\pre-dexed\debug\tbs_3.5.0_c3a20f67243ad9ab9f32c13b894c30c68552e080.jar" />
+    </item>
+
+</items>
