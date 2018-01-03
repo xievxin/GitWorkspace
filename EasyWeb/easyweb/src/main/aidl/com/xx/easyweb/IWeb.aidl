@@ -15,6 +15,9 @@ interface IWeb {
 
     void setContent(in RemoteViews remoteViews);
 
+    void setWebClass(String webclassName);
+    void setIntentService(String intentServiceName);
+
     /**
      * 重复赋值static
      */

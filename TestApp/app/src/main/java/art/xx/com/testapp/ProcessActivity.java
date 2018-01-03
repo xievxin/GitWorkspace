@@ -6,6 +6,9 @@ import android.os.Process;
 import android.util.Log;
 import android.widget.Button;
 
+import net.grandcentrix.tray.AppPreferences;
+import net.grandcentrix.tray.core.ItemNotFoundException;
+
 /**
  * Created by xievxin on 2017/6/28.
  */
@@ -26,13 +29,18 @@ public class ProcessActivity extends Activity {
 
 //        startActivity(new Intent(this, SmsActivity.class));
 
+        final AppPreferences preferences = new AppPreferences(this);
         btn.postDelayed(new Runnable() {
             @Override
             public void run() {
-                setResult(111);
-                finish();
+                try {
+                    Log.i("~", "run: " + preferences.getString("ckjr"));
+                } catch (ItemNotFoundException e) {
+                    e.printStackTrace();
+                }
+                btn.postDelayed(this, 250);
             }
-        }, 2000);
+        }, 0);
     }
 
 }

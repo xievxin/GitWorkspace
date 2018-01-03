@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.Looper;
 import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentActivity;
 import android.text.TextUtils;
@@ -19,7 +18,6 @@ import android.widget.RemoteViews;
 import android.widget.TextView;
 
 import com.xx.easyweb.manager.SystemBarTintManager;
-import com.xx.easyweb.manager.WebServiceManager;
 import com.xx.easyweb.manager.WebStyleManager;
 import com.xx.model.ServiceBean;
 
@@ -42,7 +40,7 @@ public class WebActivity extends FragmentActivity implements View.OnClickListene
 
     private static final String TAG = "WebActivity";
 
-    final H mH = new H(Looper.getMainLooper());
+    final H mH = new H();
 
     View containerLayout;
     TextView titleTv;
@@ -55,6 +53,8 @@ public class WebActivity extends FragmentActivity implements View.OnClickListene
         super.onCreate(savedInstanceState);
         setContentView(R.layout.webcontainer);
         WebService.activityCount.addAndGet(1);
+
+        intentServiceName = getIntent().getStringExtra("intentService");
 
         initStatusBar();
         initView();
@@ -93,8 +93,8 @@ public class WebActivity extends FragmentActivity implements View.OnClickListene
     }
 
     private void invokeAndAddWebview() {
-        String webClassName = WebServiceManager.webClassName;
-        Log.i(TAG, "invokeAndAddWebview: "+WebServiceManager.webClassName);
+        String webClassName = getIntent().getStringExtra("webview");
+        Log.i(TAG, "invokeAndAddWebview: " + webClassName);
         try {
             Class webCls = Class.forName(webClassName);
             Constructor con = webCls.getConstructor(Context.class);
@@ -190,12 +190,13 @@ public class WebActivity extends FragmentActivity implements View.OnClickListene
         finish();
     }
 
+    private String intentServiceName;
     private void startIntentService(String action) {
-        if(TextUtils.isEmpty(WebServiceManager.mIntentServiceName)) {
+        if(TextUtils.isEmpty(intentServiceName)) {
             return;
         }
         try {
-            Intent intent = new Intent(this, Class.forName(WebServiceManager.mIntentServiceName));
+            Intent intent = new Intent(this, Class.forName(intentServiceName));
             intent.setAction(action);
             startService(intent);
         } catch (ClassNotFoundException e) {

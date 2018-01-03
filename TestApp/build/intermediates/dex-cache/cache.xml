@@ -12,57 +12,12 @@
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\xievxin\.android\build-cache\f25c96f83fa0d2dc925720351cfa653cc7cf5f48\output\jars\classes.jar"
+        jar="C:\Users\xievxin\.android\build-cache\e46696891b65f22e88d91d345577b2d5cc63d7ea\output\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
-        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
-        <dex dex="D:\git\GitWorkspace\TestApp\app\build\intermediates\pre-dexed\debug\classes_042a90f942b992a2cb797f96292fcb9409cb9767.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\xievxin\.android\build-cache\834791bf0f242d86aaae50f7873939fbfcbabcbd\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
-        <dex dex="D:\git\GitWorkspace\TestApp\app\build\intermediates\pre-dexed\debug\classes_d9e432840dca47bfaa71845b8954a177816ee9cb.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\xievxin\.android\build-cache\09f2161f35268d4d2ed2bed3a5f13f7148f10cc3\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="68956f5ba1517b7a3d513ba540548e257741cbae">
-        <dex dex="D:\git\GitWorkspace\TestApp\app\build\intermediates\pre-dexed\debug\classes_78b972ef4456bf1a618224e96be20b113e2b6bbe.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\xievxin\.android\build-cache\0db0dfc8d60b697c7fc5fff87931ad7a3bf8aaef\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
-        <dex dex="D:\git\GitWorkspace\TestApp\app\build\intermediates\pre-dexed\debug\classes_08a481f8701f77c39775e922098513845b5ba08c.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\xievxin\.android\build-cache\2cb82ed5286a7e1bf2b920e4be07dbce4291e866\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="d4c936aa8c7d2522c82e3f1829c791d9e367f009">
-        <dex dex="D:\git\GitWorkspace\TestApp\app\build\intermediates\pre-dexed\debug\classes_170e7fd8ead1a92b79df7ea058a96ddc9e323370.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\xievxin\.android\build-cache\c9d0097321c403fc0bf68a4717b9f9936d5f63e6\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="7f2f348b830f292429db987f74ba3e67c6752322">
-        <dex dex="D:\git\GitWorkspace\TestApp\app\build\intermediates\pre-dexed\debug\classes_875a7c6d7eb01ecac277935a9b8b03b7353254a4.jar" />
+        sha1="9beab74ae4de5ca43a11d8568881e647580c8797">
+        <dex dex="D:\git\GitWorkspace\TestApp\app\build\intermediates\pre-dexed\debug\classes_a8ea3e5a8d7349b22f3ffa6e16600afb18a5abca.jar" />
     </item>
     <item
         is-multidex="false"
@@ -72,33 +27,6 @@
         revision="25.0.0"
         sha1="1be16374eb6527f279486c89a9c98cbdd473c845">
         <dex dex="D:\git\GitWorkspace\TestApp\app\build\intermediates\pre-dexed\debug\tbs_v3.3.0_285774f4c5c6ab5304588ff01b91b1f60eeae5a0.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\xievxin\.android\build-cache\3fb97a25afbd8aa011ab0164f2c1dd7ab95366c6\output\jars\libs\internal_impl-23.4.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
-        <dex dex="D:\git\GitWorkspace\TestApp\app\build\intermediates\pre-dexed\debug\internal_impl-23.4.0_29e04287bc862b2e30b709d3b2a2b75cc2555549.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\xievxin\.android\build-cache\3fb97a25afbd8aa011ab0164f2c1dd7ab95366c6\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
-        <dex dex="D:\git\GitWorkspace\TestApp\app\build\intermediates\pre-dexed\debug\classes_acceb8965230c58b4061460641150ed1a435453b.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\xievxin\.android\build-cache\a65a765fb4efc2b7089e964037db9232ed1f0b50\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="1aa5b025efe97f5006f5be16d6ca67c6c3c0c0d8">
-        <dex dex="D:\git\GitWorkspace\TestApp\app\build\intermediates\pre-dexed\debug\classes_16a75739fe55bfe2be7078f482cc0f84187eac49.jar" />
     </item>
 
 </items>

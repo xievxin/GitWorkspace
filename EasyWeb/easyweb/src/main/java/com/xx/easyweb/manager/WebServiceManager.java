@@ -29,8 +29,8 @@ public class WebServiceManager {
     IWeb webService;
     private OnServiceConnectListener mOnServiceConnectListener;
     private Context mContext;
-    public static String webClassName;
-    public static String mIntentServiceName;
+    private static String webClassName;
+    private static String mIntentServiceName;
 
     private WebServiceManager() {
     }
@@ -98,10 +98,8 @@ public class WebServiceManager {
         public void onServiceConnected(ComponentName name, IBinder service) {
             webService = IWeb.Stub.asInterface(service);
             try {
-                webService.setStaticString(WebServiceManager.class.getName(),
-                        "webClassName", WebServiceManager.webClassName);
-                webService.setStaticString(WebServiceManager.class.getName(),
-                        "mIntentServiceName", WebServiceManager.mIntentServiceName);
+                webService.setWebClass(webClassName);
+                webService.setIntentService(mIntentServiceName);
             } catch (RemoteException e) {
                 e.printStackTrace();
             }

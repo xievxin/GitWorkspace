@@ -7,13 +7,12 @@ import android.os.Bundle;
 import android.os.Process;
 import android.support.annotation.Nullable;
 import android.util.Log;
-import android.view.View;
-import android.webkit.WebSettings;
-import android.webkit.WebView;
-import android.widget.Button;
+
+import net.grandcentrix.tray.AppPreferences;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.util.Random;
 
 /**
  * Created by xievxin on 2017/6/28.
@@ -32,23 +31,31 @@ public class MainActivity extends Activity {
         setContentView(R.layout.main);
         Log.i("~", "onCreate: "+ Process.myPid());
 
-        final WebView webView = (WebView) findViewById(R.id.webview);
-        final Button btn = (Button) findViewById(R.id.button);
-        btn.setOnClickListener(new View.OnClickListener() {
+        startActivity(new Intent(this, ProcessActivity.class));
+
+        final AppPreferences appPreferences = new AppPreferences(this);
+
+        new Thread(new Runnable() {
             @Override
-            public void onClick(View v) {
-                webView.loadUrl("http://test.chuangke18.com/activity3/getYqy.html");
-//                startActivity(new Intent(MainActivity.this, ProcessActivity.class));
+            public void run() {
+                while(true) {
+                    try {
+                        Thread.sleep(1_000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    String str="_" + getRandomStr();
+                    appPreferences.put("ckjr", str);
+                    Log.w("~", "run: " + str);
+                }
             }
-        });
+        }).start();
 
-        webView.getSettings().setSavePassword(false);
-        webView.getSettings().setJavaScriptEnabled(true);
-        webView.getSettings().setCacheMode(WebSettings.LOAD_NO_CACHE);    // 连训练创客小宝都直接加载缓存，舍弃
-        webView.getSettings().setDomStorageEnabled(true);
+    }
 
-
-
+    private String getRandomStr() {
+        Random rd = new Random();
+        return rd.nextInt(99)+"";
     }
 
     @Override

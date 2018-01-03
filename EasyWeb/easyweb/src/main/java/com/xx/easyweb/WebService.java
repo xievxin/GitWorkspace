@@ -22,6 +22,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class WebService extends Service {
 
     public static AtomicInteger activityCount = new AtomicInteger();
+    private String webclassName;
+    private String intentServiceName;
 
     /**
      * 支持同时4个UI修改
@@ -76,6 +78,16 @@ public class WebService extends Service {
             }
 
             @Override
+            public void setWebClass(String webclassName) throws RemoteException {
+                WebService.this.webclassName = webclassName;
+            }
+
+            @Override
+            public void setIntentService(String intentServiceName) throws RemoteException {
+                WebService.this.intentServiceName = intentServiceName;
+            }
+
+            @Override
             public boolean setStaticString(String className, String fieldName, String value) throws RemoteException {
                 return setValue(className, fieldName, value);
             }
@@ -97,6 +109,8 @@ public class WebService extends Service {
         if(activityCount.get()==0) {
             Intent webIntent = new Intent(WebService.this, WebActivity.class);
             webIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            webIntent.putExtra("webview", webclassName);
+            webIntent.putExtra("intentService", intentServiceName);
             startActivity(webIntent);
         }
     }

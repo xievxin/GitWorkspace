@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="tbs_3.5.0">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/EasyWeb/libs/tbs_3.5.0.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

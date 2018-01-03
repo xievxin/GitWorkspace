@@ -24,3 +24,14 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
 }
+
+
+//apply plugin: 'maven'
+//uploadArchives {
+//    repositories.mavenDeployer {
+//        repository(url: 'file:///Users/caojiaming/StudioProjects/maven/')
+//        pom.groupId = GROUP
+//        pom.artifactId = POM_ARTIFACT_ID
+//        pom.version = VERSION
+//    }
+//}
