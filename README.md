@@ -1,4 +1,5 @@
-This is version 0.5.0 beta.It is suggested that you download the source code for transformation.
+`You can make your webview run in another process simply by it.
+This is version 0.5.0 beta.It is suggested that you download the source code for transformation.`
 
 Usages:
 ====
