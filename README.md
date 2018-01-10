@@ -30,7 +30,7 @@ Add EasyWeb to your project:
 Via Gradle:
 ----
 ```Java
-  compile 'com.xx:easyweb:0.5.1'
+  compile 'com.chuangke18:easyweb:0.5.2'
   ```
   
 Via Maven:
@@ -39,7 +39,7 @@ Via Maven:
 <dependency>
   <groupId>com.chuangke18</groupId>
   <artifactId>easyweb</artifactId>
-  <version>0.5.0</version>
+  <version>0.5.2</version>
   <type>aar</type>
 </dependency>
 ```
