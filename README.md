@@ -32,6 +32,9 @@ Via Gradle:
 ```Java
   compile 'com.chuangke18:easyweb:0.5.2'
   ```
+```Java
+If jcenter has not passed newest version, use repo 'https://dl.bintray.com/xiexin/maven'.
+```
   
 Via Maven:
 ----
