@@ -30,11 +30,8 @@ Add EasyWeb to your project:
 Via Gradle:
 ----
 ```Java
-  compile 'com.chuangke18:easyweb:0.5.2'
+  compile 'com.chuangke18:easyweb:0.5.0'
   ```
-```Java
-If jcenter has not passed newest version, use repo 'https://dl.bintray.com/xiexin/maven'.
-```
   
 Via Maven:
 ----
@@ -42,8 +39,7 @@ Via Maven:
 <dependency>
   <groupId>com.chuangke18</groupId>
   <artifactId>easyweb</artifactId>
-  <version>0.5.2</version>
-  <type>aar</type>
+  <version>0.5.0</version>
 </dependency>
 ```
 
