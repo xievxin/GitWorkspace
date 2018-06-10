@@ -34,15 +34,16 @@ public class MainActivity extends Activity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                startActivity(new Intent(MainActivity.this, ProcessActivity.class));
+                startActivity(new Intent(MainActivity.this, RxActivity.class));
+                finish();
             }
         });
 
 
-        Fragment fragment = new MyFragment();
-        getFragmentManager().beginTransaction()
-                .add(fragment, frgTag)
-                .commitAllowingStateLoss();
+//        Fragment fragment = new MyFragment();
+//        getFragmentManager().beginTransaction()
+//                .add(fragment, frgTag)
+//                .commitAllowingStateLoss();
     }
 
     @Override
