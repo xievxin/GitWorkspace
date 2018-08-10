@@ -20,22 +20,26 @@
     </LinearLayout>
     <Button
         android:id="@+id/staticActBtn"
+        android:layout_marginTop="1dp"
         android:text="启动静态Activity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <Button
         android:id="@+id/dynActBtn"
         android:text="启动动态Activity"
+        android:layout_marginTop="1dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <Button
         android:id="@+id/staticSvcBtn"
         android:text="启动静态Service"
+        android:layout_marginTop="1dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <Button
         android:id="@+id/dynSvcBtn"
         android:text="启动动态Service"
+        android:layout_marginTop="1dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <TextView
@@ -72,6 +76,7 @@
         <Button
             android:id="@+id/startSvcBtn"
             android:enabled="false"
+            android:layout_marginLeft="1dp"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"

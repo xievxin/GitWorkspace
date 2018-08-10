@@ -17,6 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".AppDetailActivity"/>
+        <activity android:name=".AndroidOActivity"/>
     </application>
 
     <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL"/>

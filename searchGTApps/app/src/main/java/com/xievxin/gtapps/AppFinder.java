@@ -99,7 +99,7 @@ public class AppFinder {
 
 
     /**
-     *  解析 动态Activity的方法.       d
+     *  解析 动态Activity的方法.
      *
      */
     private static String getActivityFromFile(Context context, String pkgName) {
@@ -115,10 +115,8 @@ public class AppFinder {
                 return null;
             }
 
-
             TelephonyManager tm = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
             String imei = tm.getDeviceId();
-
 
             ArrayList<String> keys = new ArrayList<String>();
             keys.add(getMD5Str(imei));

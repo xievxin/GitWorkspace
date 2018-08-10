@@ -1,7 +1,9 @@
 package com.xievxin.gtapps;
 
+import android.app.AlertDialog;
 import android.content.ComponentName;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.content.pm.ApplicationInfo;
@@ -26,6 +28,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.File;
 import java.util.List;
 
 import static com.xievxin.gtapps.AppDetailActivity.staticSvcName;
@@ -34,8 +37,11 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     private static final String TAG = "MainActivity";
 
+
+
     ListView listView;
     Button reloadBtn;
+    Button cleanBtn;
     List<String> appList;
     String[] reqestPerArr;
 
@@ -44,16 +50,53 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.O) {
+            startActivity(new Intent(this, AndroidOActivity.class));
+            finish();
+            return;
+        }
+
         setContentView(R.layout.welcome);
 
         listView = findViewById(R.id.listview);
         reloadBtn = findViewById(R.id.reloadBtn);
+        cleanBtn = findViewById(R.id.cleanBtn);
         listView.setOnItemClickListener(this);
         reloadBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 reloadBtn.setVisibility(View.GONE);
                 applyPermission();
+            }
+        });
+        cleanBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new AlertDialog.Builder(MainActivity.this)
+                        .setMessage("将清空sdcard/libs，是否继续？")
+                        .setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                String sessionPath = "/sdcard/libs";
+                                File file = new File(sessionPath);
+                                if (file.exists() && file.listFiles()!=null) {
+                                    for(File f:file.listFiles()) {
+                                        f.delete();
+                                    }
+                                }
+
+                                applyPermission();
+                                dialog.dismiss();
+                            }
+                        })
+                        .setNegativeButton("取消", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+                            }
+                        })
+                        .show();
             }
         });
 
@@ -162,13 +205,16 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                         @Override
                         public void run() {
                             listView.setAdapter(adapter);
+                            reloadBtn.setVisibility(View.GONE);
                         }
                     });
                 }else {
                     handler.post(new Runnable() {
                         @Override
                         public void run() {
-                            listView.removeAllViews();
+                            if(listView.getAdapter()!=null) {
+                                adapter.notifyDataSetChanged();
+                            }
                             reloadBtn.setVisibility(View.VISIBLE);
                             Toast.makeText(MainActivity.this, "未找到接入个推应用", Toast.LENGTH_SHORT).show();
                         }
@@ -277,7 +323,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     protected void onDestroy() {
         super.onDestroy();
         handler.removeCallbacksAndMessages(null);
-        unbindService(conn);
+//        unbindService(conn);
     }
 
     ServiceConnection conn = new ServiceConnection() {
